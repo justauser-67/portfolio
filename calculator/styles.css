@@ -1,61 +1,60 @@
-/* ---------- Reset ---------- */
+/* ---------- Global ---------- */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* ---------- Page ---------- */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #0f172a;
   color: #e5e7eb;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
-/* ---------- Calculator ---------- */
-.calculator {
-  background-color: #020617;
-  padding: 1.5rem;
-  border-radius: 12px;
+/* ---------- Calculator Card ---------- */
+.calculator-card {
+  background-color: #0f172a;
+  padding: 2rem;
+  border-radius: 10px;
   width: 320px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- Display ---------- */
-.display {
+.calc-display {
   width: 100%;
-  height: 60px;
-  background-color: #0f172a;
-  color: #e5e7eb;
+  height: 52px;
+  background-color: #020617;
   border: none;
-  border-radius: 8px;
-  font-size: 1.8rem;
-  text-align: right;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
   padding: 0 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: right;
+  color: #e5e7eb;
 }
 
-/* ---------- Buttons Grid ---------- */
-.buttons {
+/* ---------- Button Grid ---------- */
+.calc-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.75rem;
 }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons (match .btn style) ---------- */
 button {
-  height: 50px;
+  padding: 0.75rem 0;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  border-radius: 6px;
+  background-color: #020617;
+  color: #e5e7eb;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  background-color: #0f172a;
-  color: #e5e7eb;
   transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
@@ -64,17 +63,12 @@ button:hover {
 }
 
 button:active {
-  transform: scale(0.97);
+  transform: translateY(1px);
 }
 
-/* ---------- Special Buttons ---------- */
+/* ---------- Variants ---------- */
 .operator {
-  background-color: #1e293b;
   color: #38bdf8;
-}
-
-.operator:hover {
-  background-color: #334155;
 }
 
 .equals {
@@ -87,15 +81,9 @@ button:active {
 }
 
 .clear {
-  background-color: #ef4444;
-  color: #fff;
+  color: #f87171;
 }
 
-.clear:hover {
-  background-color: #dc2626;
-}
-
-/* ---------- Layout Tweaks ---------- */
 .zero {
   grid-column: span 2;
 }
