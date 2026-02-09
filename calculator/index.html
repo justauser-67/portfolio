@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
 <div class="calculator-card">
   <input id="display" class="calc-display" disabled />
 
@@ -24,15 +15,11 @@
     <button onclick="press('1')">1</button>
     <button onclick="press('2')">2</button>
     <button onclick="press('3')">3</button>
-    <button class="operator" onclick="press('-')">-</button>
+    <button class="operator" onclick="press('-')">−</button>
 
     <button class="zero" onclick="press('0')">0</button>
     <button class="operator" onclick="press('+')">+</button>
-    <button class="equals" onclick="calculate('=')">=</button>
-    <button class="clear" onclick="clearDisplay('C')">C</button>
+    <button class="equals" onclick="calculate()">=</button>
+    <button class="clear" onclick="clearDisplay()">C</button>
   </div>
 </div>
-
-<script src="script.js"></script>
-</body>
-</html>
