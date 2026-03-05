@@ -82,8 +82,10 @@ button:active {
 
 .clear {
   color: #f87171;
+  grid-column: span 2;
 }
 
 .zero {
   grid-column: span 2;
 }
+
